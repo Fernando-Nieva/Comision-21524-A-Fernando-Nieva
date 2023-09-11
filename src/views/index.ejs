@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <h1>sddasd</h1>
+    <%- include('./partials/navbar.ejs'); %>
+    <ul>
+        <% notas.forEach((nota) => { %>
+          <%- include('./nota', { nota: nota }); %>
+        <% }); %>
+      </ul>
+      <script src="./js/main.js"></script>
+</body>
+</html>
