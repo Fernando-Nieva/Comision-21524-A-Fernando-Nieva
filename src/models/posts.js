@@ -1,17 +1,23 @@
-const {sequelize}=require('../../database')
-const {DataTypes}=require('sequelize')
+const { sequelize } = require("../../database");
+const { DataTypes } = require("sequelize");
 
-const postsModel = sequelize.define('notes', {
+const PostsModel = sequelize.define("posts", {
+  // Titulo:DataTypes.STRING,
+  // Contenido: DataTypes.TEXT,
 
- Titulo: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      Contenido: {
-        type: DataTypes.TEXT,
-        allowNull: false,
-      }
-
+  Titulo: {
+    type: DataTypes.STRING,
+    validate: { notEmpty: true },
+  },
+  Contenido: {
+    type: DataTypes.TEXT,
+    validate: { notEmpty: true },
+  },
+  Autor: {
+    type: DataTypes.STRING,
+    validate: { notEmpty: true },
+  },
+  img: DataTypes.STRING,
 });
 
-module.exports = {postsModel}
+module.exports = { PostsModel };

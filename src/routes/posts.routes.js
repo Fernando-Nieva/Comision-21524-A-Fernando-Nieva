@@ -1,17 +1,11 @@
+const {Router} = require('express')
+const { createPosts, listPosts } = require('../controllers/posts.controller')
 
-const router = require ('express').Router();
-const { postsModel } = require('../models/posts'); 
-
-
-// Ruta para obtener todos los registros
-router.get('/', async (req, res) => {
-  try {
-    const registros = await postsModel.findAll();
-    res.status(200).json(registros);
-  } catch (error) {
-    res.status(400).json({ error: error.message });
-  }
-});
+const router =Router()
 
 
-module.exports = router;
+
+router.get('/',listPosts)
+router.post('/',createPosts)
+
+module.exports =router

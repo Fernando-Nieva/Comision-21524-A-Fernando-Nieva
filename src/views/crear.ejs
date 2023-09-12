@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <form action="/notes" method="post">
-        <input type="text" name="author" placeholder="@author"><br>
-        <textarea name="content" id="" cols="40" row="30">contenido</textarea><br>
-        <button>Crear nota</button>
+
+    <form action="/posts" method="post">
+        <input type="text" name="Titulo" placeholder="@Titulo del post"><br>
+        <textarea name="Contenido" id="" cols="40" row="30">contenido</textarea><br>
+        <input type="text" name="img" placeholder="@link de la imagen"><br>
+        <input type="text" name="Autor" placeholder="@author"><br>
+
+
+        <button>Postear</button>
+
+        <!-- <button type="button" class="btn btn-danger">Postear</button> -->
     </form>
-</body>
-</html>

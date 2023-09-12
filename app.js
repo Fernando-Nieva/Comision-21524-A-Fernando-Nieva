@@ -7,7 +7,7 @@ const port = process.env.PORT || 8000;
 const morgan = require('morgan');
 const path = require('path');
 const {sequelize}= require('./database');
-const { NoteModel } = require('./src/models/Notes');
+const { PostsModel } = require('./src/models/posts')
 require('ejs');
 
 //Middlewares
@@ -30,9 +30,9 @@ app.use(express.static(__dirname +'/public'))
 app.set('view engine', 'ejs');
 app.get('/',async (req, res) => {
 
-  const notas = await NoteModel.findAll()
+  const posteo = await PostsModel.findAll()
 
-  res.render('index',{title:"Home",notas: notas.reverse()});
+  res.render('index',{title:"Foro",posteo: posteo.reverse()});
   
 });
 
@@ -43,7 +43,7 @@ app.get('/crear',async(req,res)=>{
 
 })
 
-app.use('/notes',require('./src/routes/notes.routes'))
+app.use('/posts',require('./src/routes/posts.routes'))
 
 app.listen(port, () => {
   sequelize
