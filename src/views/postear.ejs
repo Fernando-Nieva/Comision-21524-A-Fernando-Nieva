@@ -6,9 +6,5 @@
 <img src="<%= postear.img %>" alt="" height="300px"><br>
 Autor: <%= postear.Autor %> <%= postear.createdAt.toLocaleString() %>
 
-<a href="/elmiminarpost/<%= postear.id %>">eliminar
-<!-- <script src="./js/main.js"></script> -->
-</a>
-<!-- <a href="/editarpost/<%= postear.id %>">editarpost
-<!-- <script src="./js/main.js"></script> -->
-</a> -->
+<a href="/eliminarpost/<%= postear.id %>" class="btn btn-danger">eliminar</a>
+<a href="../editarpost/<%= postear.id %>" class="btn btn-warning">Editar Post</a>

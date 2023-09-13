@@ -2,9 +2,6 @@ const { sequelize } = require("../../database");
 const { DataTypes } = require("sequelize");
 
 const PostsModel = sequelize.define("posts", {
-  // Titulo:DataTypes.STRING,
-  // Contenido: DataTypes.TEXT,
-
   Titulo: {
     type: DataTypes.STRING,
     validate: { notEmpty: true },
