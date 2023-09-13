@@ -2,8 +2,13 @@
 
 <h1><%= postear.Titulo %></h1>
 
-<span><%= postear.Contenido %></span>
-
+<p><span><%= postear.Contenido %></span></p>
 <img src="<%= postear.img %>" alt="" height="300px"><br>
 Autor: <%= postear.Autor %> <%= postear.createdAt.toLocaleString() %>
 
+<a href="/elmiminarpost/<%= postear.id %>">eliminar
+<!-- <script src="./js/main.js"></script> -->
+</a>
+<!-- <a href="/editarpost/<%= postear.id %>">editarpost
+<!-- <script src="./js/main.js"></script> -->
+</a> -->
