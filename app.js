@@ -42,8 +42,8 @@ app.set("view engine", "ejs");
 // Configura la ubicación de las vistas
 app.set("views", __dirname + "/src" + "/views");
 app.use(express.static(__dirname + "/views"));
-//Archivos estaticos -carpeta publica
 app.use(express.static(__dirname + "/public"));
+//Archivos estaticos -carpeta publica
 // app.use(express.static("/public"));
 
 
