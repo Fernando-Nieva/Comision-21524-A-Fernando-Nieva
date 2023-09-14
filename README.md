@@ -1,5 +1,6 @@
-Bienvenidos al FORO 
-EN este foro podras crear, editar y eliminar Posteos Libremente, comparte informacion con otros usuarios.
+**Bienvenidos al FORO** 
+
+En este foro podras crear, editar y eliminar Posteos Libremente, comparte informacion con otros usuarios.
 
 Antes de comenzar, asegúrate de crear el archivo .env indicando la configuración necesaria, incluyendo el puerto que corresponda, el nombre de usuario y la contraseña de MySQL, tal como se muestra en el archivo .ejemplo.env proporcionado.
 
