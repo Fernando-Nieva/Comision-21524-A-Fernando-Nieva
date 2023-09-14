@@ -3,8 +3,17 @@
 <h1><%= postear.Titulo %></h1>
 
 <p><span><%= postear.Contenido %></span></p>
-<img src="<%= postear.img %>" alt="" height="300px"><br>
+<img src="<%= postear.img %>" alt="" height="300px" /><br />
 Autor: <%= postear.Autor %> <%= postear.createdAt.toLocaleString() %>
 
-<a href="/eliminarpost/<%= postear.id %>" class="btn btn-danger">eliminar</a>
-<a href="../editarpost/<%= postear.id %>" class="btn btn-warning">Editar Post</a>
+<container class="btn-option">
+  <nav>
+    <a href="/eliminarpost/<%= postear.id %>" class="btn btn-danger"
+      >eliminar</a
+    >
+    <a href="../editarpost/<%= postear.id %>" class="btn btn-warning"
+      >Editar Post</a
+    >
+  </nav>
+</container>
+<link rel="stylesheet" href="./css/styles.css" />

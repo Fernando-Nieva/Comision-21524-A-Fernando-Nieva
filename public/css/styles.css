@@ -6,4 +6,15 @@ body{
     
 }
 
+.navbar-brand{
+    font-family: vegur, 'PT Sans',Verdana,  sans-serif;
+    margin-left: 100px;
+
+
+}
+.btn-option{
+    nav-down: 20px;
+    margin-top: 20px;
+}
+
 

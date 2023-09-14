@@ -2,6 +2,13 @@ const { sequelize } = require("../../database");
 const { DataTypes } = require("sequelize");
 
 const PostsModel = sequelize.define("posts", {
+
+  id:{
+    type: DataTypes.INTEGER,
+    primaryKey:true,
+    autoIncrement:true
+  },
+
   Titulo: {
     type: DataTypes.STRING,
     validate: { notEmpty: true },
@@ -14,7 +21,12 @@ const PostsModel = sequelize.define("posts", {
     type: DataTypes.STRING,
     validate: { notEmpty: true },
   },
-  img: DataTypes.STRING,
+  img: {
+    
+    type:DataTypes.STRING,
+    isUrl:true
+  } 
+
 });
 
 module.exports = { PostsModel };

@@ -1,6 +1,6 @@
-const { where } = require("sequelize");
+// const { where } = require("sequelize");
 const { PostsModel } = require("../models/posts");
-// const { post } = require("../routes/posts.routes");
+
 
 const createPosts = async (req, res) => {
   const { Titulo, Contenido, Autor, img } = req.body;
@@ -40,12 +40,10 @@ const acturalizarPost = async (req, res) => {
   try {
     // Actualiza el post en la base de datos
     const updatedPost = await PostsModel.update(post, { where: { id: id } });
-
     // Verifica si se actualizó alguna fila (es decir, si el post existía)
     if (!updatedPost) {
       return res.status(404).json({ message: "Post no encontrado :-(" });
     }
-
     // Envía el post actualizado como respuesta
     res.redirect("/");
   } catch (error) {

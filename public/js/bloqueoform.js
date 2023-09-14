@@ -1,6 +1,3 @@
-// const { createPosts} = require('../controllers/posts.controller')
-
-
 
 document.addEventListener('DOMContentLoaded', function () {
     const formulario = document.getElementById('miFormulario');
