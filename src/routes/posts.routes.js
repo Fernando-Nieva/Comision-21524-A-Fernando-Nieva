@@ -1,6 +1,5 @@
 const {Router} = require('express')
 const { createPosts,borrarPost,acturalizarPost, listarPosts} = require('../controllers/posts.controller')
-
 const router =Router()
 
 
